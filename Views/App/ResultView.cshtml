@@ -1,0 +1,12 @@
+﻿@model List<UrlModel>
+@{
+    ViewData["Title"] = "ResultView";
+}
+
+<h1>Urls</h1>
+@foreach (var item in Model)
+{
+    <p>URL:</p>
+    <p>@item.Url</p>
+    <p>@item.Body</p>
+}

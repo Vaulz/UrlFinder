@@ -1,0 +1,29 @@
+﻿@model NetExamenam.Models.UrlFindModel
+@{
+    ViewData["Title"] = "Сканирование";
+}
+
+<h1>UrlFinder</h1>
+
+@using (Html.BeginForm("GetUrls", "App", FormMethod.Post))
+{
+<fieldset>
+    <p>
+        @Html.LabelFor(m => m.Url, "URL")
+        <br />
+        @Html.EditorFor(m => m.Url)
+    </p>
+    <p>
+        @Html.LabelFor(m => m.DepthLimit, "Глубина поиска")
+        <br />
+        @Html.EditorFor(m => m.DepthLimit)
+    </p>
+    <p>
+        @Html.LabelFor(m => m.UrlsLimit, "Кол-во ссылок")
+        <br />
+        @Html.EditorFor(m => m.UrlsLimit)
+
+    </p>
+    <p><input type="submit" value="Отправить" /></p>
+</fieldset>
+}
